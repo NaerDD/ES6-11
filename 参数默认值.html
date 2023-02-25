@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+       //ES6 允许给函数参数赋初始值
+       //1.形参初始值 具有默认值的参数,一般位置要靠后(潜规则)
+      //  function add(a,b=10,c){ //不能使用 
+      //  function add(a,b,c=10){
+      //       return a+b+c
+      //   }
+      //   let result = add(1,2);
+      //   console.log(result);
+
+      //2.与结构赋值结合
+      // function connect(options){
+      //     let host = options.host
+      //     let username = options.host
+      //     let hpasswordost = options.host
+      //     let port = options.host
+      //  }
+
+      //host这里如果调用时候没传参,则自动配置为127.0.0.1
+      function connect({host="127.0.0.1",username,password,port}){
+
+        console.log(host);
+        console.log(username);
+        console.log(password);
+        console.log(port);
+        
+       }
+
+       connect({
+        host:'atpaipaitou.com',
+        // host:'localhost',
+        username:'root',
+        password:'root',
+        port:3306
+       })
+
+        
+  </script>
+</body>
+</html>

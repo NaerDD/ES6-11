@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>扩展运算符应用</title>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+<script>
+      //1数组合并
+      const kuaizi = ['bmw','benz']
+      const car = ['audi'];
+      // const bba = kuaizi.concat(car);
+      const bba = [...kuaizi,...car]
+      console.log(bba);
+      
+      //2数组克隆
+      // const sanzhihua =['E','G','M'];
+      // const sanyecao =[...sanzhihua];
+      // //如果有引用数据类型 这里只是浅拷贝
+      // console.log(sanyecao);
+
+      //3将伪数组转为真正的数组,之后可以使用map等真正数组的方法来遍历 例如map .slice
+      const divs = document.querySelectorAll('div')
+      const divArr = [...divs]
+      console.log(divArr);
+      
+</script>
+</body>
+</html>

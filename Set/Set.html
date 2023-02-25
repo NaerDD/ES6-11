@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Set</title>
+</head>
+<body>
+  <script>
+       //声明一个set 并且自动去除重复 object类型
+       
+       let s = new Set();
+       let s2 = new Set(['大师','宗师','王者','钻石','大师'])
+       console.log(s,typeof s);
+       console.log(s2,typeof s2);
+       
+       //元素个数(去重)
+       console.log(s2.size);
+       
+       //添加新的元素
+       s2.add('白金');
+       console.log(s2);
+
+       //删除元素
+       s2.delete('白金');
+       console.log(s2);
+
+       //检测
+       console.log(s2.has('王者'));
+
+       //清空
+      //  s2.clear();
+      //  console.log(s2);
+
+      //集合set 实现了Iterator这个结构
+      for(let v of s2){
+        console.log(v);
+        
+      }
+       
+        
+       
+       
+  </script>
+</body>
+</html>

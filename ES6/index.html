@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    //1通用的导入方式
+       //引入m1.js
+      //  import * as m1 from './js/m1.js'
+        // console.log(m1);
+
+       //引入m2.js模块内容 
+      //  import * as m2 from './js/m2.js'
+        // console.log(m2);
+
+       //引入m3.js模块内容 
+      //  import * as m3 from './js/m3.js'
+        // console.log(m3);
+        
+        //默认暴露我们要调用里面的方法 必须要多加一层default
+        // m3.default.change();
+
+      //2解构赋值形式
+      // import {school,teach} from "./js/m1.js";
+      // console.log(school);
+      // console.log(teach);
+      //不能重名重名可以使用别名 
+      // import {school as guigu,findJob} from "./js/m2.js";
+      // console.log(guigu);
+      // console.log(findJob);
+
+      //默认暴露必须要令别名
+      // import { default as m3} from "./js/m3.js"
+      // console.log(m3.school,m3.change);
+      
+      //3简便形式 只用于默认暴露(常用)
+      // import m3 from "./js/m3.js"
+      // console.log(m3.school,m3.change);
+
+      
+  </script>
+
+  <script src="./js/app.js" type="module">
+       
+  </script>
+</body>
+</html>

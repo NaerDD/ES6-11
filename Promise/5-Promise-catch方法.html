@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+         const p = new Promise((resolve,reject)=>{
+          setTimeout(()=>{
+            //设置P对象的状态为失败,并设置失败的值
+            reject("出错了!");
+          },1000)
+         });
+        
+         //第一种方式
+        //  p.then(function(value){},function(reason){
+        //      console.log(reason);
+        //   })
+
+          //第二种方式 语法糖(更简单简洁的一种方法) then方法不指定第一个参数 也可以执行
+          p.catch(function(reason){
+              console.warn(reason);
+           })
+    </script>
+</body>
+</html>

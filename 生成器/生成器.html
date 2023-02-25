@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成器</title>
+</head>
+<body>
+  <script>
+       //生成器就是一个特殊的函数 在fun 和函数名中加一个* 用来表示生成器 函数体中可以用yield来暂停代码的运行  用生成器函数的next方法来命令代码继续执行 并返回 value 和done done中会提示函数执行完毕没有 
+       
+      //  他可以用来异步编程 纯回调函数 node fs ..ajax.mongodb
+      function * gen(){
+          console.log('hello generator');
+          //yield 函数代码的分隔符
+          // console.log(111);
+        
+          yield '一只没有耳朵';
+          // console.log(222);
+        
+          yield '一只没有尾巴';
+          // console.log(333);
+          yield '真奇怪';
+
+       }
+
+       let iterator = gen();
+      //  console.log(iterator);
+      //  用生成器函数的next方法执行
+      //  iterator.next();
+      //  iterator.next();
+      //  iterator.next();
+       //用next调用三次才能调用完
+
+       //遍历
+      //  for (let v of gen()){
+      //   console.log(v);
+      //  }
+     console.log(iterator.next());
+     console.log(iterator.next());
+     console.log(iterator.next());
+     console.log(iterator.next());
+      
+
+  </script>
+</body>
+</html>

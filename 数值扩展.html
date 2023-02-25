@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      //0.Number.EPSILON 是JS表示的最小精度
+      // 如果两个数的差值小于它 则认为他俩相同
+      // 接近于 2.2204460492503130808472633361816e-16
+      console.log(0.1+0.2);
+      console.log(0.1+0.2==0.3);
+      
+      function equal(a,b){
+          if(Math.abs(a-b)< Number.EPSILON){
+            return true
+          }else{
+            return false
+          }
+       }
+
+       console.log(equal(0.1+0.2,0.3));
+
+       //1.二进制和八进制
+       let b = 0b1010;  //0b开头 二进制
+       let o = 0o777;   //0o开头 八进制
+       let d = 100; //十进制
+       let x = 0xff; //十六进制
+
+
+       console.log(b);
+       console.log(o);
+       console.log(d);
+       console.log(x);
+       console.log('----------------------');
+
+       //2.Number.isFinite 检测一个数值是否为有限数
+       console.log(Number.isFinite(100));
+       console.log(Number.isFinite(100/0));
+       console.log(Number.isFinite(Infinity));
+       console.log('----------------------');
+  
+       //3.Number.isNaN 检测一个数值是否为NaN (之前在ES5里它是一个单独的类型 ES6将它变成Number的一个方法)
+       console.log(Number.isNaN(123));
+       console.log(Number.isNaN(NaN));
+       console.log('----------------------');
+
+       //4.Number.parseInt Number.parseFloat字符串转整数
+       //字符串转整数
+       console.log(Number.parseInt('5211314love'));
+       console.log(Number.parseInt('3.5211314love'));
+       console.log(Number.parseFloat('3.5211314love'));
+       console.log('----------------------');
+
+       //5.Number.isInteger 判断一个数是否为整数
+       console.log(Number.isInteger(5));
+       console.log(Number.isInteger(2.5));
+       console.log('----------------------');
+
+       //6.Math.trunc将小数部分抹掉
+       console.log(Math.trunc(3.5));
+       console.log('----------------------');
+
+       //7.Math.sign 判断一个数到底是正数 负数 还是0
+       console.log(Math.sign(100)); //输出1
+       console.log(Math.sign(-100)); //输出-1
+       console.log(Math.sign(0)); //输出0
+       
+
+       
+
+       
+       
+  </script>
+</body>
+</html>
