@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+       //声明一个字符串
+      //  let str = '<a href="http://www.atChongQing.com">排排头</a>';
+
+      //  //提取 url与[标签文本]
+      //  const reg = /<a href="(.*)">(.*)<\/a>/;
+
+      //   //执行
+      //   const result = reg.exec(str);
+
+      //   console.log(result);
+      //   console.log(result[1]);
+      //   console.log(result[2]);
+      //这里返回的groups 是一个undefined
+        
+        // 对捕获到的结果 添加一个groups属性 方便提取
+        let str = '<a href="http://www.atChongQing.com">排排头</a>';
+
+        const reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
+        
+        const result = reg.exec(str)
+
+        console.log(result);
+        console.log(result.groups.url);
+        console.log(result.groups.text);
+        //这里能拿到groups
+
+        
+  </script>
+</body>
+</html>

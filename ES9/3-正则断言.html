@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正则扩展-反向断言</title>
+</head>
+<body>
+  <script>
+       //声明字符串
+       let str = 'JS142124123你知道么555拉拉';
+       
+       // \d表示数字0-9,?表示判断  
+       //这里表示拿到拉前面的数字
+       //正向断言
+      //  const reg = /\d+(?=拉)/;
+      //  const result = reg.exec(str);
+
+       //反向断言 表示拿到前面为么的后面的数字
+       const reg = /(?<=么)\d+/;
+       const result = reg.exec(str);
+       console.log(result);
+
+       
+       
+  </script>
+</body>
+</html>

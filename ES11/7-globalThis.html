@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>globalThis</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background: #58a;
+    }
+  </style>
+</head>
+<body>
+  <div id="ad"></div>
+  <script>
+       console.log(globalThis);//Window
+       let b = function fun(){
+           console.log(globalThis);
+        }
+        // console.log(b);
+
+        let ad = document.getElementById('ad');
+        ad.addEventListener("click",function(){
+          if(this.style.background='pink'){
+            setTimeout(() => {
+                //修改背景颜色 这里直接使用this 
+                console.log(this);
+                console.log(globalThis);
+                this.style.background = 'blue'
+              },2000);
+          }else{
+            setTimeout(() => {
+                //修改背景颜色 这里直接使用this 
+                console.log(this);
+                console.log(globalThis);
+                this.style.background = 'pink';
+              },2000);
+            }
+         })
+        
+        
+       
+  </script>
+</body>
+</html>
